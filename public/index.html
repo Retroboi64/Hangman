@@ -3,26 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive Hangman Game with customizable difficulty levels."
+    />
     <title>Hangman Game</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="difficulty-screen" class="difficulty-screen">
+    <section id="difficulty-screen" class="difficulty-screen">
       <h1>Choose Difficulty</h1>
-      <select id="difficulty">
-        <option value="easy">Easy</option>
-        <option value="normal">Normal</option>
-        <option value="hard">Hard</option>
-        <option value="impossible">Impossible</option>
-      </select>
-      <button id="start-button">Start Game</button>
-    </div>
-    <div id="game-container" class="container" style="display: none">
+      <form>
+        <label for="difficulty" class="visually-hidden"
+          >Select Difficulty:</label
+        >
+        <select id="difficulty" aria-label="Select Difficulty">
+          <option value="easy">Easy</option>
+          <option value="normal">Normal</option>
+          <option value="hard">Hard</option>
+          <option value="impossible">Impossible</option>
+        </select>
+        <button id="start-button" type="button" aria-label="Start Game">
+          Start Game
+        </button>
+      </form>
+    </section>
+    <main id="game-container" class="container" style="display: none">
       <h1>Hangman Game</h1>
-      <div id="word-container" class="word-container"></div>
-      <div id="message" class="message"></div>
-      <div id="attempts" class="attempts"></div>
-      <div class="letter-buttons">
+      <div id="word-container" class="word-container" aria-live="polite"></div>
+      <div id="message" class="message" aria-live="polite"></div>
+      <div id="attempts" class="attempts" aria-live="polite"></div>
+      <section id="stats" class="stats-container">
+        <p>Games Played: <span id="games-played">0</span></p>
+        <p>Wins: <span id="wins">0</span></p>
+        <p>Losses: <span id="losses">0</span></p>
+        <p>Win Rate: <span id="win-rate">0</span>%</p>
+      </section>
+      <section class="letter-buttons" aria-label="Choose a letter">
         <button class="word" data-letter="A">A</button>
         <button class="word" data-letter="B">B</button>
         <button class="word" data-letter="C">C</button>
@@ -49,17 +66,29 @@
         <button class="word" data-letter="X">X</button>
         <button class="word" data-letter="Y">Y</button>
         <button class="word" data-letter="Z">Z</button>
-      </div>
+      </section>
       <div class="controls">
-        <button id="restart-button" class="restart-button">Restart</button>
+        <button
+          id="restart-button"
+          class="restart-button"
+          aria-label="Restart Game"
+        >
+          Restart
+        </button>
       </div>
-    </div>
-    <div class="footer">
-      <p>Made by Retroboi64</p>
+    </main>
+    <footer class="footer">
+      <p>Made by <strong>Retroboi64</strong></p>
       <p>
-        <a href="https://github.com/Retroboi64" target="_blank">Github</a>
+        <a
+          href="https://github.com/Retroboi64"
+          target="_blank"
+          rel="noopener"
+          aria-label="Visit GitHub Profile"
+          >GitHub</a
+        >
       </p>
-    </div>
-    <script src="index.js"></script>
+    </footer>
+    <script src="app.js"></script>
   </body>
 </html>
