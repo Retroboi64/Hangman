@@ -112,7 +112,6 @@ class HangmanGame {
                 this.gameOver = true;
                 this.state = GameState.Win;
                 this.stats.wins++;
-                this.stats.gamesPlayed++;
                 this.calculateWinRate();
                 this.saveStatsToCookies();
             }
@@ -128,7 +127,6 @@ class HangmanGame {
                 this.gameOver = true;
                 this.state = GameState.Lose;
                 this.stats.losses++;
-                this.stats.gamesPlayed++;
                 this.calculateWinRate();
                 this.saveStatsToCookies();
             }
@@ -143,7 +141,6 @@ class HangmanGame {
         this.guessedLetters.clear();
         this.gameOver = false;
         this.state = GameState.Playing;
-        this.stats.gamesPlayed++;
         this.displayMessage("", "black");
         this.updateDisplay();
     }
