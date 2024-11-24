@@ -118,6 +118,10 @@ const words = [
   "galaxy",
   "jam",
   "schmuck",
+  "muck",
+  "phonk",
+  "ender",
+  "sketchy",
 ];
 
 const game = new HangmanGame(
