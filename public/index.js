@@ -43,12 +43,20 @@ class HangmanGame {
             if (this.checkWinCondition()) {
                 this.displayMessage("You Win! 🎉", "green");
                 this.gameOver = true;
+                letterButtons.forEach((button) => {
+                    button.classList.remove("pressed");
+                    button.disabled = true;
+                });
             }
         }
         else {
             this.attemptsLeft--;
             if (this.checkLossCondition()) {
                 this.displayMessage(`You Lose! The word was "${this.wordToGuess}".`, "red");
+                letterButtons.forEach((button) => {
+                    button.classList.remove("pressed");
+                    button.disabled = true;
+                });
                 this.gameOver = true;
             }
         }
@@ -62,10 +70,6 @@ class HangmanGame {
         this.gameOver = false;
         this.displayMessage("", "black");
         this.updateDisplay();
-        const gameContainer = document.querySelector(".container");
-        if (gameContainer instanceof HTMLElement) {
-            gameContainer.style.display = "block";
-        }
     }
 }
 const wordContainer = document.getElementById("word-container");
@@ -100,6 +104,14 @@ const words = [
     "galaxy",
     "jam",
     "schmuck",
+    "muck",
+    "phonk",
+    "ender",
+    "sketchy",
+    "fly",
+    "linus",
+    "mac",
+    "coding",
 ];
 const game = new HangmanGame(words, wordContainer, messageElement, attemptsElement);
 letterButtons.forEach((button) => {

@@ -58,6 +58,10 @@ class HangmanGame {
       if (this.checkWinCondition()) {
         this.displayMessage("You Win! 🎉", "green");
         this.gameOver = true;
+        letterButtons.forEach((button) => {
+          button.classList.remove("pressed");
+          (button as HTMLButtonElement).disabled = true;
+        });
       }
     } else {
       this.attemptsLeft--;
@@ -67,6 +71,10 @@ class HangmanGame {
           `You Lose! The word was "${this.wordToGuess}".`,
           "red"
         );
+        letterButtons.forEach((button) => {
+          button.classList.remove("pressed");
+          (button as HTMLButtonElement).disabled = true;
+        });
         this.gameOver = true;
       }
     }
