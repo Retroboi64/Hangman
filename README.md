@@ -1,16 +1,13 @@
 # Hangman Game
 
-A simple Hangman game built with [your chosen technologies, e.g., JavaScript, TypeScript, or HTML/CSS]. This project is perfect for those who enjoy word-guessing games and want a bit of a challenge with different difficulty levels.
-
-## Features
-- **Dynamic Difficulty**: Easy, Medium, and Hard modes with unique word selections.
+A simple Hangman game built with Typescript.
+- **Dynamic Difficulty**: Easy, Medium, and Hard modes with unique word selections will be added.
 - **Interactive Gameplay**: Guess letters to reveal the word before you run out of lives.
-- **Customizable**: Easily add new words or modify the difficulty settings.
 
 ---
 
 ## How to Play
-1. Select a difficulty: Easy, Medium, or Hard.
+1. Select a difficulty: Easy, Medium, Hard does not work yet.
 2. Guess letters to reveal the hidden word.
 3. You win if you guess the word correctly before running out of lives.
 4. You lose if you run out of lives before completing the word.
@@ -42,4 +39,4 @@ A simple Hangman game built with [your chosen technologies, e.g., JavaScript, Ty
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/hangman-game.git
+   git clone https://github.com/retroboi64/hangman.git
