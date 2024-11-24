@@ -140,6 +140,7 @@ class HangmanGame {
         this.attemptsLeft = this.maxAttempts;
         this.guessedLetters.clear();
         this.gameOver = false;
+        this.stats.gamesPlayed++;
         this.state = GameState.Playing;
         this.displayMessage("", "black");
         this.updateDisplay();
