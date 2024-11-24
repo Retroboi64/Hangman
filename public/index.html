@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="difficulty-screen" class="difficulty-screen">
+      <h1>Choose Difficulty</h1>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="normal">Normal</option>
+        <option value="hard">Hard</option>
+        <option value="impossible">Impossible</option>
+      </select>
+      <button id="start-button">Start Game</button>
+    </div>
+    <div id="game-container" class="container" style="display: none">
+      <h1>Hangman Game</h1>
+      <div id="word-container" class="word-container"></div>
+      <div id="message" class="message"></div>
+      <div id="attempts" class="attempts"></div>
+      <div class="letter-buttons">
+        <button class="word" data-letter="A">A</button>
+        <button class="word" data-letter="B">B</button>
+        <button class="word" data-letter="C">C</button>
+        <button class="word" data-letter="D">D</button>
+        <button class="word" data-letter="E">E</button>
+        <button class="word" data-letter="F">F</button>
+        <button class="word" data-letter="G">G</button>
+        <button class="word" data-letter="H">H</button>
+        <button class="word" data-letter="I">I</button>
+        <button class="word" data-letter="J">J</button>
+        <button class="word" data-letter="K">K</button>
+        <button class="word" data-letter="L">L</button>
+        <button class="word" data-letter="M">M</button>
+        <button class="word" data-letter="N">N</button>
+        <button class="word" data-letter="O">O</button>
+        <button class="word" data-letter="P">P</button>
+        <button class="word" data-letter="Q">Q</button>
+        <button class="word" data-letter="R">R</button>
+        <button class="word" data-letter="S">S</button>
+        <button class="word" data-letter="T">T</button>
+        <button class="word" data-letter="U">U</button>
+        <button class="word" data-letter="V">V</button>
+        <button class="word" data-letter="W">W</button>
+        <button class="word" data-letter="X">X</button>
+        <button class="word" data-letter="Y">Y</button>
+        <button class="word" data-letter="Z">Z</button>
+      </div>
+      <div class="controls">
+        <button id="restart-button" class="restart-button">Restart</button>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Made by Retroboi64</p>
+      <p>
+        <a href="https://github.com/Retroboi64" target="_blank">Github</a>
+      </p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
