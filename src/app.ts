@@ -182,7 +182,6 @@ class HangmanGame {
     this.guessedLetters.clear();
     this.gameOver = false;
     this.state = GameState.Playing;
-    this.stats.gamesPlayed++;
     this.displayMessage("", "black");
     this.updateDisplay();
   }
