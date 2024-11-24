@@ -122,6 +122,10 @@ const words = [
   "phonk",
   "ender",
   "sketchy",
+  "fly",
+  "linus",
+  "mac",
+  "coding",
 ];
 
 const game = new HangmanGame(
